@@ -96,7 +96,7 @@ data/
 | --- | --- | --- |
 | `ns_1e-3` | Download `ns_V1e-3_N5000_T50.mat` from [this Google Drive folder](https://drive.google.com/drive/folders/1UnbQh2WWc6knEHbLn-ZaXrKUZhp7pjt-) and place it at `data/ns_V1e-3_N5000_T50.mat`. | Loaded from MATLAB key `u`, then reshaped to `[N, T, 1, H, W]`. |
 | `wave` | Generate directly with `python data/wave/wave_generate.py`; the script writes `data/wave.h5`. | HDF5 dataset `data`, read as `[N, T, H, W, C]` and permuted to `[N, T, C, H, W]`. |
-| `sst` | The SST benchmark follows: daily fields from the [CMEMS Global Ocean Physics Reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description), an eddy-resolving 1/12-degree global product, cropped to a fixed oceanic box and split into four non-overlapping `64 x 64` tiles. | Store the processed tensor dict at `data/sst_T20_N1000.pt` with key `data`. |
+| `sst` | The SST benchmark follows: daily fields from the [CMEMS Global Ocean Physics Reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_ANALYSISFORECAST_PHY_001_024/services), an eddy-resolving 1/12-degree global product, cropped to a fixed oceanic box and split into four non-overlapping `64 x 64` tiles. | Store the processed tensor dict at `data/sst_T20_N1000.pt` with key `data`. |
 
 For the wave generator, install the optional simulation dependencies if your environment does not already have them:
 
@@ -374,12 +374,11 @@ python eval_merlin.py --help
 The paper appears in the Proceedings of the 43rd International Conference on Machine Learning (ICML 2026).
 
 ```bibtex
-@inproceedings{lu2026merlin,
+@inproceedings{lu2026interpretable,
   title     = {Interpretable Functional Koopman Learning with Non-Markovian Closure for Spatiotemporal Systems},
   author    = {Lu, Wanfeng and Ma, He and Lin, Wei and Zhu, Qunxi},
-  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
-  year      = {2026},
-  series    = {Proceedings of Machine Learning Research},
-  volume    = {306}
+  booktitle={Forty-third International Conference on Machine Learning},
+  year={2026},
+  url={https://openreview.net/forum?id=lquDiBCgNJ}
 }
 ```
