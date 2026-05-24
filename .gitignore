@@ -1,0 +1,53 @@
+# Python cache / build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Experiment outputs
+archives/
+results/
+runs/
+outputs/
+checkpoints/
+wandb/
+tensorboard/
+
+# Model weights and checkpoints
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Dataset / generated data files
+*.h5
+*.hdf5
+*.mat
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.csv
+*.tsv
+
+# Notebook checkpoints
+.ipynb_checkpoints/
